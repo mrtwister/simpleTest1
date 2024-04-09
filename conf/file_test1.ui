@@ -97,11 +97,11 @@
                         ],
                         "Handlers": [
                             {
-                                "event": "onStart",
+                                "event": "onInput",
                                 "action": "run",
-                                "listener": "bcode",
+                                "listener": "",
                                 "type": "online",
-                                "method": "ЭтоТестовыйВызов",
+                                "method": "СканированиеШтрихкода",
                                 "postExecute": "",
                                 "alias": ""
                             }
