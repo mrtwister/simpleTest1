@@ -74,6 +74,40 @@
                         ]
                     }
                 ]
+            },
+            {
+                "ProcessName": "Сканируем",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Первый экран",
+                        "hideToolBarScreen": true,
+                        "hideBottomBarScreen": true,
+                        "Elements": [
+                            {
+                                "type": "barcode",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Variable": "bcode",
+                                "type_s": "Штрихкод",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "",
+                                "type": "online",
+                                "method": "СканированиеШтрихкода",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "ConfigurationSettings": {
@@ -105,7 +139,7 @@
         "HTMLdocument_ready": "",
         "PyGeneral": "",
         "PelicanInit": "",
-        "GitHubHandlers": "https://raw.githubusercontent.com/mrtwister/confSimpleUITest/main/handlers1.py",
+        "GitHubHandlers": "https://raw.githubusercontent.com/mrtwister/simpleTest1/main/handlers/hand1.py",
         "GitHubToken": "",
         "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcA=="
     }
