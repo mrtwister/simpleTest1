@@ -14,7 +14,7 @@ def init_on_start(hashMap,_files=None,_data=None):
 def input_qty(hashMap,_files=None,_data=None):
 
    sql = sqlClass()
-   success=sql.SQLExec("insert into Record(barcode,name,qty) values(?,?,?)",hashMap.get('barcode')+","+hashMap.get("nom")+","+str(hashMap.get("qty")))
+   success=sql.SQLExec("insert into Record(barcode,name,qty) values(?,?,?)",hashMap.get('bcode')+","+hashMap.get("text_product")+","+str(hashMap.get("qty")))
 
    if success:
            hashMap.put("ShowScreen","Сканирование")
