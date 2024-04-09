@@ -12,14 +12,14 @@ def init_on_start(hashMap,_files=None,_data=None):
    return hashMap
 
 def input_qty(hashMap,_files=None,_data=None):
+  from ru.travelfood.simple_ui import SimpleSQLProvider as sqlClass
+  sql = sqlClass()
+  success=sql.SQLExec("insert into Record(barcode,name,qty) values(?,?,?)",hashMap.get('bcode')+","+hashMap.get("text_product")+","+str(hashMap.get("qty")))
+  success = True
 
-   #sql = sqlClass()
-   #success=sql.SQLExec("insert into Record(barcode,name,qty) values(?,?,?)",hashMap.get('bcode')+","+hashMap.get("text_product")+","+str(hashMap.get("qty")))
-   success = True
-
-   if success:
-           hashMap.put("ShowScreen","Сканирование")
-           hashMap.put("toast","Добавлено" + hashMap.get("text_product"))
+  if success:
+          hashMap.put("ShowScreen","Сканирование")
+          hashMap.put("toast","Добавлено" + hashMap.get("text_product"))
 
 
    return hashMap
