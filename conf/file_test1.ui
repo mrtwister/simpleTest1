@@ -97,7 +97,7 @@
                         ],
                         "Handlers": [
                             {
-                                "event": "onInput",
+                                "event": "onStart",
                                 "action": "run",
                                 "listener": "bcode",
                                 "type": "online",
