@@ -370,8 +370,8 @@
         ],
         "arch2": true,
         "ConfigurationFileName": "Sample1_GettingStarted_1.ui",
-        "host_uid": "9e3f1b92ddc14a2e8ff9bba6c7d0193e",
-        "uid": "6549a30dead24f5ea55913c7bda7351e"
+        "host_uid": "6814f71bbb3648c39feab681e4a8e62c",
+        "uid": "221fc34eaa76453997ee480ca896a16b"
     },
     "RunPython": true
 }
