@@ -23,3 +23,42 @@ def input_qty(hashMap,_files=None,_data=None):
 
 
    return hashMap
+
+def on_start_barcode(hashMap,_files=None,_data=None):
+
+    rows=[]
+
+    table  = {
+    "type": "table",
+    "textsize": "20",
+
+    "columns": [
+    {
+        "name": "barcode",
+        "header": "[Barcode]",
+        "weight": "2"
+    },
+    {
+        "name": "name",
+        "header": "Name",
+        "weight": "2"
+    },
+      {
+        "name": "qty",
+        "header": "[Qty]",
+        "weight": "1"
+    }
+    ]
+    }
+
+    # sql = sqlClass()
+    # res = sql.SQLQuery("select * from Record","")
+
+    # records = json.loads(res)
+    # for record in records:
+    #     rows.append({"barcode":record['barcode'],"name":record['name'],"qty":str(record['qty'])})
+
+    # table['rows'] =rows
+    # hashMap.put("table",json.dumps(table))
+
+    return hashMap
