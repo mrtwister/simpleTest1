@@ -141,6 +141,17 @@
         "PelicanInit": "",
         "GitHubHandlers": "https://raw.githubusercontent.com/mrtwister/simpleTest1/main/handlers/hand1.py",
         "GitHubToken": "",
-        "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcA=="
+        "CommonHandlers": [
+            {
+                "event": "onLaunch",
+                "action": "run",
+                "listener": "",
+                "type": "python",
+                "method": "init_on_start",
+                "postExecute": "",
+                "alias": ""
+            }
+        ],
+        "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcAoKZGVmIGluaXRfb25fc3RhcnQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKCiAgIGhhc2hNYXAucHV0KCJTUUxDb25uZWN0RGF0YWJhc2UiLCJ0ZXN0MS5EQiIpCiAgIGhhc2hNYXAucHV0KCJTUUxFeGVjIixqc29uLmR1bXBzKHsicXVlcnkiOiJjcmVhdGUgdGFibGUgSUYgTk9UIEVYSVNUUyBSZWNvcmQoaWQgaW50ZWdlciBwcmltYXJ5IGtleSBhdXRvaW5jcmVtZW50LGFydCB0ZXh0LCBiYXJjb2RlIHRleHQsIG5hbWUgdGV4dCwgcXR5IHJlYWwpIiwicGFyYW1zIjoiIn0pKQoKICAgcmV0dXJuIGhhc2hNYXA="
     }
 }
