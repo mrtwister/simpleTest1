@@ -99,7 +99,7 @@
                             {
                                 "event": "onInput",
                                 "action": "run",
-                                "listener": "",
+                                "listener": "bcode",
                                 "type": "online",
                                 "method": "ЭтоТестовыйВызов",
                                 "postExecute": "",
