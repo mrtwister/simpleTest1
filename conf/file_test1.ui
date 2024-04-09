@@ -105,7 +105,7 @@
         "HTMLdocument_ready": "",
         "PyGeneral": "",
         "PelicanInit": "",
-        "GitHubHandlers": "https://raw.githubusercontent.com/mrtwister/confSimpleUITest/main/handlers1.py",
+        "GitHubHandlers": "https://raw.githubusercontent.com/mrtwister/simpleTest1/main/handlers/hand1.py",
         "GitHubToken": "",
         "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcA=="
     }
