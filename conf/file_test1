@@ -1,0 +1,112 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Тестовая конфа для разработки",
+        "ConfigurationDescription": "Создание новой конфигурации",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Какой то процесс",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Экран номер раз",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "n11",
+                                        "type_s": "Надпись",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "Кнопка1",
+                                        "Variable": "btn_bt1",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "Кнопка 2",
+                                        "Variable": "btn2",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_bt1",
+                                "type": "online",
+                                "method": "ПриемкаПоЗаказу_ЭкранНачало_Ввод",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "",
+                                "type": "python",
+                                "method": "test",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "2bef4ce9fa79460d945a6d50aaf9995c",
+            "dictionaries": "",
+            "vendor": "",
+            "vendor_url": "",
+            "vendor_password": "",
+            "handler_split_mode": false,
+            "handler_url": "",
+            "handler_password": ""
+        },
+        "host_uid": "cdf0d5a35ee54fa6986a924b78b6fd45",
+        "ConfigurationTags": "",
+        "uid": "b7b12f2f69044c2ab2f67eb5326b01e5",
+        "ConfigurationFileName": "file_test1",
+        "agent": false,
+        "ForegroundService": false,
+        "StopForegroundServiceOnExit": false,
+        "BroadcastIntent": "",
+        "BroadcastVariable": "",
+        "FaceRecognitionURL": "",
+        "OnKeyboardMain": false,
+        "LaunchProcess": "",
+        "LaunchVar": "",
+        "MenuWebTemplate": "",
+        "Launch": "",
+        "HTMLHead": "",
+        "HTMLdocument_ready": "",
+        "PyGeneral": "",
+        "PelicanInit": "",
+        "GitHubHandlers": "https://raw.githubusercontent.com/mrtwister/confSimpleUITest/main/handlers1.py",
+        "GitHubToken": "",
+        "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcA=="
+    }
+}
