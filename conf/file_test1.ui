@@ -93,6 +93,25 @@
                                 "Variable": "bcode",
                                 "type_s": "Штрихкод",
                                 "weight": "0"
+                            },
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Variable": "table",
+                                "Elements": [
+                                    {
+                                        "type": "TableLayout",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "type_s": "Таблица",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
                             }
                         ],
                         "Handlers": [
@@ -102,6 +121,15 @@
                                 "listener": "",
                                 "type": "online",
                                 "method": "СканированиеШтрихкода",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "listener": "",
+                                "type": "python",
+                                "method": "",
                                 "postExecute": "",
                                 "alias": ""
                             }
@@ -170,6 +198,6 @@
                 "alias": ""
             }
         ],
-        "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcAoKZGVmIGluaXRfb25fc3RhcnQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKCiAgIGhhc2hNYXAucHV0KCJTUUxDb25uZWN0RGF0YWJhc2UiLCJ0ZXN0MS5EQiIpCiAgIGhhc2hNYXAucHV0KCJTUUxFeGVjIixqc29uLmR1bXBzKHsicXVlcnkiOiJjcmVhdGUgdGFibGUgSUYgTk9UIEVYSVNUUyBSZWNvcmQoaWQgaW50ZWdlciBwcmltYXJ5IGtleSBhdXRvaW5jcmVtZW50LGFydCB0ZXh0LCBiYXJjb2RlIHRleHQsIG5hbWUgdGV4dCwgcXR5IHJlYWwpIiwicGFyYW1zIjoiIn0pKQoKICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBpbnB1dF9xdHkoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKCiAgICNzcWwgPSBzcWxDbGFzcygpCiAgICNzdWNjZXNzPXNxbC5TUUxFeGVjKCJpbnNlcnQgaW50byBSZWNvcmQoYmFyY29kZSxuYW1lLHF0eSkgdmFsdWVzKD8sPyw/KSIsaGFzaE1hcC5nZXQoJ2Jjb2RlJykrIiwiK2hhc2hNYXAuZ2V0KCJ0ZXh0X3Byb2R1Y3QiKSsiLCIrc3RyKGhhc2hNYXAuZ2V0KCJxdHkiKSkpCiAgIHN1Y2Nlc3MgPSBUcnVlCgogICBpZiBzdWNjZXNzOgogICAgICAgICAgIGhhc2hNYXAucHV0KCJTaG93U2NyZWVuIiwi0KHQutCw0L3QuNGA0L7QstCw0L3QuNC1IikKICAgICAgICAgICBoYXNoTWFwLnB1dCgidG9hc3QiLCLQlNC+0LHQsNCy0LvQtdC90L4iICsgaGFzaE1hcC5nZXQoInRleHRfcHJvZHVjdCIpKQoKCiAgIHJldHVybiBoYXNoTWFw"
+        "PyHandlers": "ZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CiAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKICByZXR1cm4gaGFzaE1hcAoKZGVmIGluaXRfb25fc3RhcnQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKCiAgIGhhc2hNYXAucHV0KCJTUUxDb25uZWN0RGF0YWJhc2UiLCJ0ZXN0MS5EQiIpCiAgIGhhc2hNYXAucHV0KCJTUUxFeGVjIixqc29uLmR1bXBzKHsicXVlcnkiOiJjcmVhdGUgdGFibGUgSUYgTk9UIEVYSVNUUyBSZWNvcmQoaWQgaW50ZWdlciBwcmltYXJ5IGtleSBhdXRvaW5jcmVtZW50LGFydCB0ZXh0LCBiYXJjb2RlIHRleHQsIG5hbWUgdGV4dCwgcXR5IHJlYWwpIiwicGFyYW1zIjoiIn0pKQoKICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBpbnB1dF9xdHkoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICBmcm9tIHJ1LnRyYXZlbGZvb2Quc2ltcGxlX3VpIGltcG9ydCBTaW1wbGVTUUxQcm92aWRlciBhcyBzcWxDbGFzcwogIHNxbCA9IHNxbENsYXNzKCkKICBzdWNjZXNzPXNxbC5TUUxFeGVjKCJpbnNlcnQgaW50byBSZWNvcmQoYmFyY29kZSxuYW1lLHF0eSkgdmFsdWVzKD8sPyw/KSIsaGFzaE1hcC5nZXQoJ2Jjb2RlJykrIiwiK2hhc2hNYXAuZ2V0KCJ0ZXh0X3Byb2R1Y3QiKSsiLCIrc3RyKGhhc2hNYXAuZ2V0KCJxdHkiKSkpCiAgc3VjY2VzcyA9IFRydWUKCiAgaWYgc3VjY2VzczoKICAgICAgICAgIGhhc2hNYXAucHV0KCJTaG93U2NyZWVuIiwi0KHQutCw0L3QuNGA0L7QstCw0L3QuNC1IikKICAgICAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsItCU0L7QsdCw0LLQu9C10L3QviIgKyBoYXNoTWFwLmdldCgidGV4dF9wcm9kdWN0IikpCgoKICAgcmV0dXJuIGhhc2hNYXA="
     }
 }
