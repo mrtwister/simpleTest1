@@ -3,7 +3,7 @@ from ru.travelfood.simple_ui import SimpleSQLProvider as sqlClass
 
 def test(hashMap,_files=None,_data=None):
 	if hashMap.get("listener") == "btn2":
-			hashMap.put("toast", "123")
+			hashMap.put("toast", "12345")
 
 	return hashMap
 
