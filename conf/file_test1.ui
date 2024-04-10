@@ -134,7 +134,8 @@
                                 "postExecute": "",
                                 "alias": ""
                             }
-                        ]
+                        ],
+                        "noConfirmation": true
                     },
                     {
                         "type": "Operation",
