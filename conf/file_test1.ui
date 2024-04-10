@@ -156,6 +156,54 @@
                         ]
                     }
                 ]
+            },
+            {
+                "ProcessName": "wifi",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "РезультатыСканирования",
+                        "hideToolBarScreen": true,
+                        "noConfirmation": true,
+                        "hideBottomBarScreen": true,
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "Сканировать сети",
+                                        "Variable": "btn_scan",
+                                        "BackgroundColor": "#FFE700",
+                                        "TextSize": "22",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_scan",
+                                "type": "python",
+                                "method": "scan_wifi",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "ConfigurationSettings": {
@@ -200,7 +248,7 @@
                 "alias": ""
             }
         ],
-        "PyHandlers": "aW1wb3J0IGpzb24KZnJvbSBydS50cmF2ZWxmb29kLnNpbXBsZV91aSBpbXBvcnQgU2ltcGxlU1FMUHJvdmlkZXIgYXMgc3FsQ2xhc3MKCmRlZiB0ZXN0KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CglpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CgkJCWhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKCXJldHVybiBoYXNoTWFwCgpkZWYgaW5pdF9vbl9zdGFydChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoKCWhhc2hNYXAucHV0KCJTUUxDb25uZWN0RGF0YWJhc2UiLCJ0ZXN0MS5EQiIpCgloYXNoTWFwLnB1dCgiU1FMRXhlYyIsanNvbi5kdW1wcyh7InF1ZXJ5IjoiY3JlYXRlIHRhYmxlIElGIE5PVCBFWElTVFMgUmVjb3JkKGlkIGludGVnZXIgcHJpbWFyeSBrZXkgYXV0b2luY3JlbWVudCxhcnQgdGV4dCwgYmFyY29kZSB0ZXh0LCBuYW1lIHRleHQsIHF0eSByZWFsKSIsInBhcmFtcyI6IiJ9KSkKCglyZXR1cm4gaGFzaE1hcAoKZGVmIGlucHV0X3F0eShoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoJCglzcWwgPSBzcWxDbGFzcygpCglzdWNjZXNzPXNxbC5TUUxFeGVjKCJpbnNlcnQgaW50byBSZWNvcmQoYmFyY29kZSxuYW1lLHF0eSkgdmFsdWVzKD8sPyw/KSIsaGFzaE1hcC5nZXQoJ2Jjb2RlJykrIiwiK2hhc2hNYXAuZ2V0KCJ0ZXh0X3Byb2R1Y3QiKSsiLCIrc3RyKGhhc2hNYXAuZ2V0KCJxdHkiKSkpCglzdWNjZXNzID0gVHJ1ZQoKCWlmIHN1Y2Nlc3M6CgkJCQkJaGFzaE1hcC5wdXQoIlNob3dTY3JlZW4iLCLQodC60LDQvdC40YDQvtCy0LDQvdC40LUiKQoJCQkJCWhhc2hNYXAucHV0KCJ0b2FzdCIsItCU0L7QsdCw0LLQu9C10L3QviIgKyBoYXNoTWFwLmdldCgidGV4dF9wcm9kdWN0IikpCgoKCXJldHVybiBoYXNoTWFwCgpkZWYgb25fc3RhcnRfYmFyY29kZShoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoJCglyb3dzPVtdCgl0YWJsZSAgPSB7CgkidHlwZSI6ICJ0YWJsZSIsCgkidGV4dHNpemUiOiAiMjAiLAoKCSJjb2x1bW5zIjogWwoJewoJCQkibmFtZSI6ICJiYXJjb2RlIiwKCQkJImhlYWRlciI6ICJbQmFyY29kZV0iLAoJCQkid2VpZ2h0IjogIjIiCgl9LAoJewoJCQkibmFtZSI6ICJuYW1lIiwKCQkJImhlYWRlciI6ICJOYW1lIiwKCQkJIndlaWdodCI6ICIyIgoJfSwKCQl7CgkJCSJuYW1lIjogInF0eSIsCgkJCSJoZWFkZXIiOiAiW1F0eV0iLAoJCQkid2VpZ2h0IjogIjEiCgl9CgldCgl9CgoJc3FsID0gc3FsQ2xhc3MoKQoJcmVzID0gc3FsLlNRTFF1ZXJ5KCJzZWxlY3QgKiBmcm9tIFJlY29yZCIsIiIpCgoJcmVjb3JkcyA9IGpzb24ubG9hZHMocmVzKQoJZm9yIHJlY29yZCBpbiByZWNvcmRzOgoJCQlyb3dzLmFwcGVuZCh7ImJhcmNvZGUiOnJlY29yZFsnYmFyY29kZSddLCJuYW1lIjpyZWNvcmRbJ25hbWUnXSwicXR5IjpzdHIocmVjb3JkWydxdHknXSl9KQoKCXRhYmxlWydyb3dzJ10gPXJvd3MKCWhhc2hNYXAucHV0KCJ0YWJsZSIsanNvbi5kdW1wcyh0YWJsZSkpCgoJcmV0dXJuIGhhc2hNYXA=",
+        "PyHandlers": "aW1wb3J0IGpzb24KZnJvbSBydS50cmF2ZWxmb29kLnNpbXBsZV91aSBpbXBvcnQgU2ltcGxlU1FMUHJvdmlkZXIgYXMgc3FsQ2xhc3MKCmRlZiB0ZXN0KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CglpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuMiI6CgkJCWhhc2hNYXAucHV0KCJ0b2FzdCIsICIxMjMiKQoKCXJldHVybiBoYXNoTWFwCgpkZWYgaW5pdF9vbl9zdGFydChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoKCWhhc2hNYXAucHV0KCJTUUxDb25uZWN0RGF0YWJhc2UiLCJ0ZXN0MS5EQiIpCgloYXNoTWFwLnB1dCgiU1FMRXhlYyIsanNvbi5kdW1wcyh7InF1ZXJ5IjoiY3JlYXRlIHRhYmxlIElGIE5PVCBFWElTVFMgUmVjb3JkKGlkIGludGVnZXIgcHJpbWFyeSBrZXkgYXV0b2luY3JlbWVudCxhcnQgdGV4dCwgYmFyY29kZSB0ZXh0LCBuYW1lIHRleHQsIHF0eSByZWFsKSIsInBhcmFtcyI6IiJ9KSkKCglyZXR1cm4gaGFzaE1hcAoKZGVmIGlucHV0X3F0eShoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoJCglzcWwgPSBzcWxDbGFzcygpCglzdWNjZXNzPXNxbC5TUUxFeGVjKCJpbnNlcnQgaW50byBSZWNvcmQoYmFyY29kZSxuYW1lLHF0eSkgdmFsdWVzKD8sPyw/KSIsaGFzaE1hcC5nZXQoJ2Jjb2RlJykrIiwiK2hhc2hNYXAuZ2V0KCJ0ZXh0X3Byb2R1Y3QiKSsiLCIrc3RyKGhhc2hNYXAuZ2V0KCJxdHkiKSkpCglzdWNjZXNzID0gVHJ1ZQoKCWlmIHN1Y2Nlc3M6CgkJCQkJaGFzaE1hcC5wdXQoIlNob3dTY3JlZW4iLCLQodC60LDQvdC40YDQvtCy0LDQvdC40LUiKQoJCQkJCWhhc2hNYXAucHV0KCJ0b2FzdCIsItCU0L7QsdCw0LLQu9C10L3QviIgKyBoYXNoTWFwLmdldCgidGV4dF9wcm9kdWN0IikpCgoKCXJldHVybiBoYXNoTWFwCgpkZWYgb25fc3RhcnRfYmFyY29kZShoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoJCglyb3dzPVtdCgl0YWJsZSAgPSB7CgkidHlwZSI6ICJ0YWJsZSIsCgkidGV4dHNpemUiOiAiMjAiLAoKCSJjb2x1bW5zIjogWwoJewoJCQkibmFtZSI6ICJiYXJjb2RlIiwKCQkJImhlYWRlciI6ICJbQmFyY29kZV0iLAoJCQkid2VpZ2h0IjogIjIiCgl9LAoJewoJCQkibmFtZSI6ICJuYW1lIiwKCQkJImhlYWRlciI6ICJOYW1lIiwKCQkJIndlaWdodCI6ICIyIgoJfSwKCQl7CgkJCSJuYW1lIjogInF0eSIsCgkJCSJoZWFkZXIiOiAiW1F0eV0iLAoJCQkid2VpZ2h0IjogIjEiCgl9CgldCgl9CgoJc3FsID0gc3FsQ2xhc3MoKQoJcmVzID0gc3FsLlNRTFF1ZXJ5KCJzZWxlY3QgKiBmcm9tIFJlY29yZCIsIiIpCgoJcmVjb3JkcyA9IGpzb24ubG9hZHMocmVzKQoJZm9yIHJlY29yZCBpbiByZWNvcmRzOgoJCQlyb3dzLmFwcGVuZCh7ImJhcmNvZGUiOnJlY29yZFsnYmFyY29kZSddLCJuYW1lIjpyZWNvcmRbJ25hbWUnXSwicXR5IjpzdHIocmVjb3JkWydxdHknXSl9KQoKCXRhYmxlWydyb3dzJ10gPXJvd3MKCWhhc2hNYXAucHV0KCJ0YWJsZSIsanNvbi5kdW1wcyh0YWJsZSkpCgoJcmV0dXJuIGhhc2hNYXAKCmRlZiBvbl9zdGFydF9iYXJjb2RlKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CgloYXNoTWFwLnB1dCgidG9hc3QiLCAi0J/RgNC+0LLQtdGA0LrQsCDRgdCy0Y/Qt9C4INGB0LrQsNC90LjRgNC+0LLQsNC90LjQtSDRgdC10YLQuCIpCgoJcmV0dXJuIGhhc2hNYXA=",
         "RunPython": true
     }
 }
