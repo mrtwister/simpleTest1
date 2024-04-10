@@ -8,32 +8,14 @@
                 "type": "Process",
                 "ProcessName": "Настройка WI-FI",
                 "PlanFactHeader": "План-факт",
-                "DefineOnBackPressed": false,
-                "hidden": false,
-                "login_screen": false,
-                "SC": false,
                 "Operations": [
                     {
                         "type": "Operation",
                         "Name": "Сканирование сетей",
-                        "Timer": false,
-                        "hideToolBarScreen": false,
-                        "noScroll": false,
-                        "handleKeyUp": false,
                         "noConfirmation": true,
                         "hideBottomBarScreen": true,
-                        "onlineOnStart": false,
-                        "send_when_opened": false,
-                        "send_after_opened": false,
-                        "onlineOnInput": false,
-                        "DefOnlineOnCreate": "",
-                        "DefOnlineOnInput": "",
-                        "DefOnCreate": "",
-                        "DefOnInput": "",
                         "Elements": [
                             {
-                                "Value": "",
-                                "Variable": "",
                                 "type": "LinearLayout",
                                 "weight": "0",
                                 "height": "match_parent",
@@ -45,8 +27,6 @@
                                         "height": "wrap_content",
                                         "width": "match_parent",
                                         "weight": "0",
-                                        "Value": "",
-                                        "Variable": "",
                                         "orientation": "vertical",
                                         "Elements": [
                                             {
@@ -55,7 +35,6 @@
                                                 "width": "match_parent",
                                                 "weight": "1",
                                                 "Value": "@sel",
-                                                "Variable": "",
                                                 "gravity_horizontal": "left"
                                             },
                                             {
@@ -68,32 +47,26 @@
                                                 "BackgroundColor": "#f5c842",
                                                 "TextBold": true
                                             }
-                                        ],
-                                        "BackgroundColor": "",
-                                        "StrokeWidth": "",
-                                        "Padding": ""
+                                        ]
                                     },
                                     {
                                         "type": "CardsLayout",
                                         "height": "match_parent",
                                         "width": "match_parent",
                                         "weight": "0",
-                                        "Value": "@cards",
-                                        "Variable": ""
+                                        "Value": "@cards"
                                     }
-                                ],
-                                "BackgroundColor": "",
-                                "StrokeWidth": "",
-                                "Padding": ""
+                                ]
                             },
                             {
-                                "Value": "",
                                 "Variable": "result",
                                 "type": "voice",
-                                "Elements": []
+                                "Elements": [],
+                                "weight": "0",
+                                "height": "wrap_content",
+                                "width": "wrap_content"
                             }
                         ],
-                        "onlineOnAfterStart": false,
                         "Handlers": [
                             {
                                 "event": "onStart",
@@ -153,6 +126,9 @@
                 "method": "init",
                 "postExecute": ""
             }
-        ]
+        ],
+        "ConfigurationFileName": "pos.ui",
+        "host_uid": "3ae03c2f4c4a46e5bbfb01a8ae5d7ae3",
+        "uid": "89160116e4c04e41b8b80a23a581075f"
     }
 }
