@@ -30,7 +30,6 @@ def input_qty(hashMap,_files=None,_data=None):
 def on_start_barcode(hashMap,_files=None,_data=None):
 	
 	rows=[]
-
 	table  = {
 	"type": "table",
 	"textsize": "20",
