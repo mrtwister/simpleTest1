@@ -51,14 +51,14 @@ def on_start_barcode(hashMap,_files=None,_data=None):
 		]
 		}
 
-		# sql = sqlClass()
-		# res = sql.SQLQuery("select * from Record","")
+		sql = sqlClass()
+		res = sql.SQLQuery("select * from Record","")
 
-		# records = json.loads(res)
-		# for record in records:
-		#     rows.append({"barcode":record['barcode'],"name":record['name'],"qty":str(record['qty'])})
+		records = json.loads(res)
+		for record in records:
+		    rows.append({"barcode":record['barcode'],"name":record['name'],"qty":str(record['qty'])})
 
-		# table['rows'] =rows
+		table['rows'] =rows
 		hashMap.put("table",json.dumps(table))
 
 		return hashMap
