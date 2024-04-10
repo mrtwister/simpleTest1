@@ -65,7 +65,7 @@ def on_start_barcode(hashMap,_files=None,_data=None):
 
 	return hashMap
 
-def on_start_barcode(hashMap,_files=None,_data=None):
+def scan_wifi(hashMap,_files=None,_data=None):
 	hashMap.put("toast", "Проверка связи сканирование сети")
 
 	return hashMap
