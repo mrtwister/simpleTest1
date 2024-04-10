@@ -59,7 +59,7 @@ def on_start_barcode(hashMap,_files=None,_data=None):
 		#     rows.append({"barcode":record['barcode'],"name":record['name'],"qty":str(record['qty'])})
 
 		# table['rows'] =rows
-		# hashMap.put("table",json.dumps(table))
+		hashMap.put("table",json.dumps(table))
 
 		return hashMap
 
