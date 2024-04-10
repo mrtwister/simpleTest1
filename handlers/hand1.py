@@ -64,3 +64,8 @@ def on_start_barcode(hashMap,_files=None,_data=None):
 	hashMap.put("table",json.dumps(table))
 
 	return hashMap
+
+def on_start_barcode(hashMap,_files=None,_data=None):
+	hashMap.put("toast", "Проверка связи сканирование сети")
+
+	return hashMap
